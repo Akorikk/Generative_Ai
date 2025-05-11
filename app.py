@@ -20,7 +20,7 @@ def main():
     st.sidebar.title("Select a LLM")
     model = st.sidebar.selectbox(
         "Choose a Model",
-        ["mixtral-8x7b-32768", "llama2-70b-4096"]
+        ["llama3-70b-8192", "gemma-7b-it"]
     )
 
     Conversation_memory = st.sidebar.slider("Conversation Memory length:", 1, 10, 5)
@@ -38,7 +38,7 @@ def main():
             
 
     groq_chat = ChatGroq(
-        Grop_api=Grop_api,
+        api_key=Grop_api,
         model_name=model 
     )
 
